@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="Minesweeper_Kitty_Boom.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Minesweeper_Kitty_Boom"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ImageBrush x:Key="myBrush" ImageSource="Assets/background.jpg" Stretch="Fill" />
+    </Page.Resources>
+    <Grid Background="{StaticResource myBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Text="MINESWEEPER" 
+                   Grid.ColumnSpan="3"
+                   FontWeight="Medium"
+                   Foreground="White"
+                   FontSize="40" 
+                   Margin="0,10,0,0"
+                   HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="Kitty Boom" 
+                   Grid.ColumnSpan="3"
+                   FontWeight="SemiLight"
+                   Foreground="White"
+                   Grid.Row="1"
+                   FontSize="36" 
+                   HorizontalAlignment="Center"></TextBlock>
+        <Button Content="Easy - 9 x 9" 
+                Name="EasyButton" 
+                Grid.Row="3"
+                Grid.Column="3"
+                Foreground="White"
+                FontWeight="ExtraLight"
+                BorderBrush="Black"
+                FontSize="30"
+                Click="EasyButton_Click" 
+                Margin="20"
+                HorizontalAlignment="Stretch"/>
+        <Button Content="Medium - 16 x 16" 
+                Name="MediumButton" 
+                Grid.Column="3"
+                Foreground="White"
+                FontWeight="ExtraLight"
+                BorderBrush="Black"
+                FontSize="30"
+                Grid.Row="4"
+                HorizontalAlignment="Stretch"
+                Click="MediumButton_Click" 
+                Margin="20"/>
+        <Button Content="Hard - 30 x 16" 
+                Grid.Row="5"
+                Grid.Column="3"
+                Foreground="White"
+                FontWeight="ExtraLight"
+                BorderBrush="Black"
+                FontSize="30"
+                Name="HardButton" 
+                Click="HardButton_Click" 
+                HorizontalAlignment="Stretch"
+                Margin="20"/>
+    </Grid>
+</Page>

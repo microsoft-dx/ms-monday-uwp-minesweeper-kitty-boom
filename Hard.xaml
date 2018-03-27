@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Minesweeper_Kitty_Boom.Hard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Minesweeper_Kitty_Boom"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Vertical">
+        <Button Name="ResetButton"
+                Click="ResetButton_Click"
+                HorizontalAlignment="Center">
+            <Image Source="Assets/kittyboom.jpg" 
+                   Height="50" 
+                   Width="50" 
+                   Stretch="Fill" />
+        </Button>
+        <StackPanel Name="signBoardStackPanel" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+
+        </StackPanel>
+
+    </StackPanel>
+</Page>
